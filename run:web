@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+set -euo pipefail
+PYTHON=${PYTHON:-python3}
+PORT=${DASHBOARD_PORT:-8080}
+export DASHBOARD_PORT=$PORT
+$PYTHON -m apps.web.main

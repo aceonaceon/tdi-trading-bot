@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tdi-trading-bot"
+version = "0.1.0"
+description = "TDI-based trading bot and dashboard"
+authors = [{name = "AI Agent"}]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
+
+[tool.ruff]
+line-length = 100
+src = ["apps", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "B", "I", "UP", "ASYNC", "S"]
+ignore = ["S101"]
+
+[tool.ruff.format]
+quote-style = "double"
+
+[tool.mypy]
+python_version = "3.11"
+packages = ["apps", "tests"]
+ignore_missing_imports = true
+strict = false

@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+set -euo pipefail
+PYTHON=${PYTHON:-python3}
+export POLL_INTERVAL_SECONDS=${POLL_INTERVAL_SECONDS:-2}
+TICKS=${MAX_TICKS:-3}
+$PYTHON -m apps.bot.cli run --max-ticks "$TICKS" --verbose "$@"
