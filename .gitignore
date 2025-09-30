@@ -1,0 +1,4 @@
+__pycache__/
+*.pyc
+tdi_bot.db
+bot_run.log
